@@ -91,7 +91,7 @@ textarea{
     box-shadow: 3px 2px 2px #a4a6b3;
 }
 
-button[id="generateBtn"]{
+button[id="generate"]{
     color: #fff;;
     background-color: #eccfcf;
     text-shadow: 1px 1px 2px #7e7e8685;
@@ -106,7 +106,7 @@ button[id="generateBtn"]{
     
 }
 
-button[id="generateBtn"]:hover{
+button[id="generate"]:hover{
     color: #eccfcf;
     background-color: #fff;
     font-weight: 700;

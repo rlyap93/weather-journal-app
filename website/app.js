@@ -3,7 +3,7 @@ let baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip='
 let apiKey = '62eac2ad377f4082e0e45d28a4c12900';
 
 // Event listener to add function to existing HTML DOM element
-document.getElementById('generateBtn').addEventListener('click', performAction);
+document.getElementById('generate').addEventListener('click', performAction);
 
 /* Function called by event listener */
 function performAction(e){
