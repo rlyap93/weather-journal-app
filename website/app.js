@@ -1,6 +1,6 @@
 // Personal API Key for OpenWeatherMap API
 let baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip='
-let apiKey = '62eac2ad377f4082e0e45d28a4c12900';
+const apiKey = '62eac2ad377f4082e0e45d28a4c12900';
 
 // Event listener to add function to existing HTML DOM element
 document.getElementById('generate').addEventListener('click', performAction);
@@ -28,7 +28,7 @@ function performAction(e){
 
 /* Function to GET Web API Data*/
 const getWeatherData = async (baseURL, zip, key)=>{
-  const res = await fetch(`${baseURL}${zip},US&appid=${key}`);
+  const res = await fetch(`${baseURL}${zip},US&appid=${key}&units=metric`);
     
   try {
     const data = await res.json();
@@ -62,7 +62,7 @@ updateInterface = async() => {
   const request = await fetch('/all');
   try{
     const data = await request.json();
-    document.getElementById('temp').innerHTML = " " + data.temperature;
+    document.getElementById('temp').innerHTML = " " + data.temperature + "&#8451;";
     document.getElementById('date').innerHTML = " " + data.date;
     document.getElementById('content').innerHTML = " " + data.feeling;
 
